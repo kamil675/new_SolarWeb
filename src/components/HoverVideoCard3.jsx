@@ -28,7 +28,6 @@ const reelsData = [
   },
 ];
 
-
 const HoverVideoCard3 = () => {
   const videoRefs = useRef([]);
   const [playingIndex, setPlayingIndex] = useState(null);
@@ -53,7 +52,7 @@ const HoverVideoCard3 = () => {
   return (
     <section className="bg-white py-10 px-4 sm:px-6 lg:px-12 w-full">
       <div className="max-w-[100%] mx-auto">
-        <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-green-800 mb-8">
+        <h2 className=" mt-20 text-center text-xl sm:text-2xl md:text-3xl font-bold text-green-800 mb-8">
           Growth At Divy
         </h2>
 
@@ -82,7 +81,6 @@ const HoverVideoCard3 = () => {
                   )}
                 </button>
               </div>
-             
             </div>
           ))}
         </div>

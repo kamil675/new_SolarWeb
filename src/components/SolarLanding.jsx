@@ -60,9 +60,9 @@ const navLinks = [
     path: "/products", // ✅ parent clickable
     dropdown: [
       { name: "Solar Panel", path: "/Solar-pannel", icon: <MdSolarPower /> },
-      { name: "Solar Pump", path: "/Solar-Pump", icon: <GiWaterDrop /> },
-      { name: "Micro Inverter", path: "/Micro-Inverter", icon: <MdMemory /> },
-      { name: "Earthing", path: "/Earthing", icon: <GiGroundSprout /> },
+      { name: "Solar Pump", path: "/solar-pump", icon: <GiWaterDrop /> },
+      { name: "Micro Inverter", path: "/micro-inverter", icon: <MdMemory /> },
+      { name: "Earthing", path: "/earthing", icon: <GiGroundSprout /> },
       {
         name: "Lightning Arrestor (LA)",
         path: "/LA",
@@ -70,7 +70,7 @@ const navLinks = [
       },
       {
         name: "Diesel/Petrol Genset",
-        path: "/Diesel/Petrol Genset",
+        path: "/Diesel/Petrol%20Genset",
         icon: <FaGasPump />,
       },
     ],
@@ -143,10 +143,7 @@ export default function SolarLanding() {
         </Link>
 
         {/* Desktop Menu */}
-        <nav
-          className="hidden md:flex items-center gap-8 text-base font-medium"
-          onMouseLeave={() => setDesktopDropdown(null)}
-        >
+        <nav className="hidden md:flex items-center gap-8 text-base font-medium">
           {navLinks.map((link) =>
             link.dropdown ? (
               <div
@@ -177,7 +174,6 @@ export default function SolarLanding() {
                     ? "text-orange-500 font-semibold"
                     : "hover:text-orange-400"
                 }
-                onMouseEnter={() => setDesktopDropdown(null)}
               >
                 {link.name}
               </NavLink>
@@ -220,7 +216,6 @@ export default function SolarLanding() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
             className="absolute top-full left-0 w-full bg-white shadow-lg z-40"
-            onMouseLeave={() => setDesktopDropdown(null)}
           >
             <div className="max-w-7xl mx-auto px-5 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {navLinks
