@@ -3,7 +3,6 @@ import React from "react";
 import { Suspense, lazy } from "react";
 
 import DivyRedesign from "../Images/DivyRedesign.webp";
-
 import "./Home.css";
 
 // import { FaRobot } from "react-icons/fa";
@@ -99,15 +98,14 @@ function Home() {
         </section>
       </div>
 
-      <section>
+      <section className="About mt-10">
         <Conversation />
       </section>
+
       <Suspense fallback={<div></div>}></Suspense>
 
-      <section className=" -mt-72  md:-mt-72 lg:-mt-72 xl:-mt-72 2xl:-mt-[500px]  m-10">
-        {/* <ChartCard /> */}
-      </section>
-      <section className="About mt-24">
+      {/* Calculator */}
+      <section className="About mt-0 ">
         <SolarCostCalculator />
       </section>
 
@@ -142,10 +140,8 @@ function Home() {
       <section className=" mt-36 md:mt-20 lg:mt-20 xl:mt-20 2xl:mt-20  About1">
         <FiguringOut1 />
       </section>
-      <section className=" mt-16 About1">
-        <ExactMatchPage1 />
-      </section>
-      <section className=" -mt-96">
+
+      <section className=" mt-10">
         <RatingWorks />
       </section>
 
